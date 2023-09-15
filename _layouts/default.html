@@ -31,7 +31,8 @@
           {% else %}
           <a class="s-sidebar__nav-link" href="{{p.url}}">
           {% endif %}
-            <i class="fa"></i><em>{{p.title}}</em>
+            <!--<i class="fa"></i>-->
+            <em>{{p.title}}</em>
           </a>
         </li>
         {% endfor %}
@@ -58,7 +59,7 @@
   <!-- Content -->
   <main class="s-layout__content">
     <h1>wonderhouse</h1>
-    <div markdown="1">{{ content }}</div>
+    <div>{{ content }}</div>
   </main>
 </div>
 </body>
