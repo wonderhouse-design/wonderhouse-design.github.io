@@ -7,4 +7,4 @@ layout: default
 order: 1
 ---
 
-![Ellary](/assets/images/Ellary/collage.jpg)
+![Ellary](/assets/images/Ellary/DSC06006.jpg)
