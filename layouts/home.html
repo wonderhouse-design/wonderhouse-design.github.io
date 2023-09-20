@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
-  <title>{{ page.title }}</title>
+  <title>{{ .Title }}</title>
 <!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">-->
 <!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/base-min.css">-->
 
@@ -23,19 +23,20 @@
     <nav class="s-sidebar__nav">
       <ul>
 
-        {% assign pages = site.pages | sort:"order" | where_exp: 'page', 'page.title' %}
-        {% for p in pages %}
+        {{ $thisPage := .Page }}
+        {{ range .Site.RegularPages }}
         <li>
-          {% if page.url == p.url %}
-          <a class="s-sidebar__nav-link selected" href="{{p.url}}">
-          {% else %}
-          <a class="s-sidebar__nav-link" href="{{p.url}}">
-          {% endif %}
-            <!--<i class="fa"></i>-->
-            <em>{{p.title}}</em>
-          </a>
+          {{ if eq .Page.RelPermalink $thisPage.RelPermalink }}
+          <a class="s-sidebar__nav-link selected" href="{{ .RelPermalink }}">
+            {{ else }}
+            <a class="s-sidebar__nav-link" href="{{ .RelPermalink }}">
+              {{ end }}
+              <!--<i class="fa"></i>-->
+              <em>{{ .Title }}</em>
+            </a>
         </li>
-        {% endfor %}
+        {{ end }}
+
 
 <!--        <li>-->
 <!--          <a class="s-sidebar__nav-link" href="#0">-->
@@ -59,7 +60,7 @@
   <!-- Content -->
   <main class="s-layout__content">
     <h1>wonderhouse</h1>
-    <div>{{ content }}</div>
+    <div>{{ .Content }}</div>
   </main>
 </div>
 </body>

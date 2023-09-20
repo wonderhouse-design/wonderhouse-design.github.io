@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+  <title>{{ .Title }}</title>
+<!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">-->
+<!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/base-min.css">-->
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Lora">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/layout.css">
+</head>
+<body>
+<div class="s-layout">
+  <!-- Sidebar -->
+  <div class="s-layout__sidebar">
+    <a class="s-sidebar__trigger" href="#">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav class="s-sidebar__nav">
+      <ul>
+
+        {{ $p := .Page }}
+        {{- range .Pages }}
+        <li>
+          {{ if eq .Page.RelPermalink $p.RelPermalink }}
+          <a class="s-sidebar__nav-link selected" href="{{ $p.RelPermalink }}">
+            {{ else }}
+            <a class="s-sidebar__nav-link" href="{{ $p.RelPermalink }}">
+              {{ end }}
+              <!--<i class="fa"></i>-->
+              <em>{{ $p.Title }}</em>
+            </a>
+        </li>
+        {{- end }}
+
+
+<!--        <li>-->
+<!--          <a class="s-sidebar__nav-link" href="#0">-->
+<!--            <i class="fa fa-home"></i><em>Home</em>-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a class="s-sidebar__nav-link" href="#0">-->
+<!--            <i class="fa fa-user"></i><em>About</em>-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a class="s-sidebar__nav-link" href="#0">-->
+<!--            <i class="fa fa-camera"></i><em>Projects</em>-->
+<!--          </a>-->
+<!--        </li>-->
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Content -->
+  <main class="s-layout__content">
+    <h1>wonderhouse</h1>
+    <div>{{ .Content }}</div>
+  </main>
+</div>
+</body>
+</html>

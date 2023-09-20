@@ -3,8 +3,8 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 title: Home
-layout: default
-order: 1
+type: page
+#order: 1
 ---
 
 ![Ellary](/assets/images/Ellary/DSC06006.jpg)

@@ -1,8 +1,9 @@
 ---
-layout: default
+#layout: default
+type: page
 title: How it works
-order: 4
-permalink: /how_it_works/
+#order: 4
+#permalink: /how_it_works/
 ---
 
 
