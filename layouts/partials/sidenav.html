@@ -1,0 +1,24 @@
+<!-- Sidebar -->
+<div class="s-layout__sidebar">
+    <a class="s-sidebar__trigger" href="#">
+        <i class="fa fa-bars"></i>
+    </a>
+    <nav class="s-sidebar__nav">
+        <ul>
+
+            {{ $thisPage := .Page }}
+            {{ range .Site.RegularPages }}
+            <li>
+                {{ if eq .Page.RelPermalink $thisPage.RelPermalink }}
+                <a class="s-sidebar__nav-link selected" href="{{ .RelPermalink }}">
+                    {{ else }}
+                    <a class="s-sidebar__nav-link" href="{{ .RelPermalink }}">
+                        {{ end }}
+                        <!--<i class="fa"></i>-->
+                        <em>{{ upper .Title }}</em>
+                    </a>
+            </li>
+            {{ end }}
+        </ul>
+    </nav>
+</div>

@@ -15,47 +15,7 @@
 </head>
 <body>
 <div class="s-layout">
-  <!-- Sidebar -->
-  <div class="s-layout__sidebar">
-    <a class="s-sidebar__trigger" href="#">
-      <i class="fa fa-bars"></i>
-    </a>
-    <nav class="s-sidebar__nav">
-      <ul>
-
-        {{ $thisPage := .Page }}
-        {{ range .Site.RegularPages }}
-        <li>
-          {{ if eq .Page.RelPermalink $thisPage.RelPermalink }}
-          <a class="s-sidebar__nav-link selected" href="{{ .RelPermalink }}">
-            {{ else }}
-            <a class="s-sidebar__nav-link" href="{{ .RelPermalink }}">
-              {{ end }}
-              <!--<i class="fa"></i>-->
-              <em>{{ .Title }}</em>
-            </a>
-        </li>
-        {{ end }}
-
-
-<!--        <li>-->
-<!--          <a class="s-sidebar__nav-link" href="#0">-->
-<!--            <i class="fa fa-home"></i><em>Home</em>-->
-<!--          </a>-->
-<!--        </li>-->
-<!--        <li>-->
-<!--          <a class="s-sidebar__nav-link" href="#0">-->
-<!--            <i class="fa fa-user"></i><em>About</em>-->
-<!--          </a>-->
-<!--        </li>-->
-<!--        <li>-->
-<!--          <a class="s-sidebar__nav-link" href="#0">-->
-<!--            <i class="fa fa-camera"></i><em>Projects</em>-->
-<!--          </a>-->
-<!--        </li>-->
-      </ul>
-    </nav>
-  </div>
+{{ partial "sidenav" . }}
 
   <!-- Content -->
   <main class="s-layout__content">

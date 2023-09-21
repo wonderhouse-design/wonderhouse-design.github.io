@@ -21,8 +21,8 @@
       <i class="fa fa-bars"></i>
     </a>
     <nav class="s-sidebar__nav">
+      <! -- not used? -->
       <ul>
-
         {{ $p := .Page }}
         {{- range .Pages }}
         <li>
@@ -32,7 +32,7 @@
             <a class="s-sidebar__nav-link" href="{{ $p.RelPermalink }}">
               {{ end }}
               <!--<i class="fa"></i>-->
-              <em>{{ $p.Title }}</em>
+              <em>{{ upper $p.Title }}</em>
             </a>
         </li>
         {{- end }}

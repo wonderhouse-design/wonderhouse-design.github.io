@@ -40,7 +40,7 @@ $( document ).ready(function() {
 		} else {
 			var item = {
 				src		: $src,
-				w		: 800, // temp default size
+				w		: 600, // temp default size
 				h 		: 600, // temp default size
 				title 	: $title,
 				msrc	: $msrc
