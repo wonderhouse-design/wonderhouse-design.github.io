@@ -7,7 +7,8 @@
         <ul>
 
             {{ $thisPage := .Page }}
-            {{ range .Site.RegularPages }}
+            {{ $pagesInNav := .Site.AllPages }}
+            {{ range $pagesInNav }}
             <li>
                 {{ if eq .Page.RelPermalink $thisPage.RelPermalink }}
                 <a class="s-sidebar__nav-link selected" href="{{ .RelPermalink }}">
