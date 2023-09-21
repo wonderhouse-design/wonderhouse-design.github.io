@@ -14,8 +14,6 @@ Documentation and licence at https://github.com/liwenyip/hugo-easy-gallery/
 			<!-- skip files that aren't images, or that include the thumb suffix in their name -->
 			{{- $thumbext := $.Get "thumb" | default "-thumb" }}
 			{{- $isthumb := .Name | findRE ($thumbext | printf "%s\\.") }}<!-- is the current file a thumbnail image? -->
-			{{- $isdouble := .Name | findRE `^[^\.]+\.[^\.]+\.` | len | ne 0 }}<!-- is the current file a thumbnail image? -->
-<!--+++{{ $isdouble }}+++-->
 			{{- $isimg := lower .Name | findRE "\\.(gif|jpg|jpeg|tiff|png|bmp|webp|avif|jxl)" }}<!-- is the current file an image? -->
 			{{- if and $isimg (not $isthumb) }}
 				{{- $caption :=  .Name | replaceRE "\\..*" "" | humanize }}<!-- humanized filename without extension -->
@@ -23,10 +21,10 @@ Documentation and licence at https://github.com/liwenyip/hugo-easy-gallery/
 				{{- $thumb := .Name | replaceRE "(\\.)" ($thumbext | printf "%s.") }}<!-- filename of thumbnail image -->
 				{{- $thumbexists := where $files "Name" $thumb }}<!-- does a thumbnail image exist? --> 
 				{{- $thumbURL := print $baseURL ($.Get "dir") "/" $thumb | absURL }}<!-- absolute URL to thumbnail image -->
-				<div class="box {{ if $isdouble }}double{{ else }}single{{ end }}">
+				<div class="box">
 				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-				    <div class="img {{ if $isdouble }}double{{ else }}single{{ end }}" style="background-image: url('{{ if $thumbexists }}{{ $thumbURL }}{{ else }}{{ $linkURL }}{{ end }}');" >
-				      <img itemprop="thumbnail" src="{{ if $thumbexists }}{{ $thumbURL }}{{ else }}{{ $linkURL }}{{ end }}" alt="{{ $caption }}" class="double"/><!-- <img> hidden if in .gallery -->
+				    <div class="img" style="background-image: url('{{ if $thumbexists }}{{ $thumbURL }}{{ else }}{{ $linkURL }}{{ end }}');" >
+				      <img itemprop="thumbnail" src="{{ if $thumbexists }}{{ $thumbURL }}{{ else }}{{ $linkURL }}{{ end }}" alt="{{ $caption }}" /><!-- <img> hidden if in .gallery -->
 				    </div>
 <!--			      <figcaption>-->
 <!--		          <p>{{ $caption }}</p>-->

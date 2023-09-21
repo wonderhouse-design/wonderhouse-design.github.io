@@ -12,56 +12,34 @@ Grid Layout Styles
     margin: 10px;
     max-width: 768px;
 }
-
 .gallery .box {
     float: left;
     position: relative;
-    width: 50%;
-
-
-}
-
-.gallery .box.double {
-    width: 50%;
-    padding-bottom: 80%;
-}
-
-.gallery .box.single {
+    /* Default: 1 tile wide */
     width: 100%;
-    padding-bottom: 60%;
+    padding-bottom: 100%; 
 }
-
-
-/*.gallery .box {*/
-/*    float: left;*/
-/*    position: relative;*/
-/*    !* Default: 1 tile wide *!*/
-/*    width: 100%;*/
-/*    padding-bottom: 100%; */
-/*}*/
-
-
-/*@media only screen and (min-width : 365px) {*/
-/*    !* Tablet view: 2 tiles *!*/
-/*    .gallery .box {*/
-/*        width: 50%;*/
-/*        padding-bottom: 50%;*/
-/*    }*/
-/*}*/
-/*@media only screen and (min-width : 480px) {*/
-/*    !* Small desktop / ipad view: 3 tiles *!*/
-/*    .gallery .box {*/
-/*        width: 33.3%;*/
-/*        padding-bottom: 33.3%; !*  *!*/
-/*    }*/
-/*}*/
-/*@media only screen and (min-width : 9999px) {*/
-/*   !* Medium desktop: 4 tiles *!*/
-/*   .box {*/
-/*      width: 25%;*/
-/*      padding-bottom: 25%;*/
-/*   }*/
-/*}*/
+@media only screen and (min-width : 365px) {
+    /* Tablet view: 2 tiles */
+    .gallery .box {
+        width: 50%;
+        padding-bottom: 50%;
+    }
+}
+@media only screen and (min-width : 480px) {
+    /* Small desktop / ipad view: 3 tiles */
+    .gallery .box {
+        width: 33.3%;
+        padding-bottom: 33.3%; /*  */
+    }
+}
+@media only screen and (min-width : 9999px) {
+   /* Medium desktop: 4 tiles */
+   .box {
+      width: 25%;
+      padding-bottom: 25%;
+   }
+}
 
 /*
 Transition styles
@@ -81,11 +59,6 @@ figure styles
 figure {
     position:relative; /* purely to allow absolution positioning of figcaption */
     overflow: hidden;
-
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-    margin-block-start: auto;
-    margin-block-end: auto;
 }
 .gallery figure {
     position: absolute;
@@ -118,17 +91,9 @@ img / a styles
     top: 0;
     bottom: 0;
     background-size: cover;
+    background-position: 50% 50%;
     background-repeat: no-repeat;
 }
-
-.gallery .img.double {
-    background-position: 100% 100%;
-}
-
-.gallery .img.single {
-    background-position: 100% 100%;
-}
-
 .gallery.hover-effect-zoom figure:hover .img {
     transform: scale(1.05);
 }

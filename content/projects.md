@@ -1,5 +1,5 @@
 ---
-type: page
+type: gallery
 title: Projects
 order: 3
 permalink: /projects/
