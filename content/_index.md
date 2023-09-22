@@ -4,6 +4,7 @@
 
 title: Home
 type: page
+menu: 10
 #order: 1
 ---
 

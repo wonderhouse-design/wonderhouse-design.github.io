@@ -11,7 +11,11 @@ body {
 
 h1 {
   font-size: 1.4em;
+  /*padding-left: 2em;*/
+  /*padding-right: 2em;*/
 }
+
+p {}
 
 em {
   font-style: normal;
@@ -38,7 +42,7 @@ a {
 
 .s-layout__content img {
   width: 100%;
-  padding: 2em;
+  /*padding: 2em;*/
 }
 
 /* Sidebar */

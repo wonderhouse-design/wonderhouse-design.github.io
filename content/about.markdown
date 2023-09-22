@@ -1,7 +1,7 @@
 ---
 #layout: page
 title: About
-order: 2
+menu: 20
 permalink: /about/
 ---
 

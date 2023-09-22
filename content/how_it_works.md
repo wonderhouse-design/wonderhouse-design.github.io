@@ -2,7 +2,7 @@
 #layout: default
 type: page
 title: How it works
-#order: 4
+menu: 30
 #permalink: /how_it_works/
 ---
 
