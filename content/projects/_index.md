@@ -6,8 +6,8 @@ menu: 40
 #permalink: /projects/
 ---
 
-[![Ellary](/assets/images/Ellary/11-hero.jpg)](Ellary/)
+{{< project_image Name="Ellary" Img="/assets/images/Ellary/11-hero.jpg" >}}
 
-[![Bluehouse](/assets/images/Bluehouse/01-hero.jpg)](Bluehouse/)
+{{< project_image Name="Bluehouse" Img="/assets/images/Bluehouse/01-hero.jpg" >}}
 
-[![Little Barnfield](/assets/images/LittleBarnfield/08-hero.jpg)](LittleBarnfield/)
+{{< project_image Name="Little Barnfield" Img="/assets/images/Little Barnfield/08-hero.jpg" >}}
