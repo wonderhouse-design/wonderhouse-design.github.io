@@ -4,7 +4,7 @@ title: Little Barnfield
 #order: 3
 #permalink: /projects/
 ---
-Little Barnfield
+LITTLE BARNFIELD
 {{< gallery dir="/images/Little Barnfield" />}}
 
 {{< load-photoswipe >}}

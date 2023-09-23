@@ -1,7 +1,7 @@
 ---
 #type: page
 title: Projects
-menu: 40
+menu: 50
 #order: 3
 #permalink: /projects/
 ---
