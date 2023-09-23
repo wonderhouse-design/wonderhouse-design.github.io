@@ -1,3 +1,5 @@
+$highlight: #23dacb;
+
 /* Primary Styles */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -6,13 +8,10 @@
 body {
   font-family: 'Lora', serif;
   font-size: 1em;
-  /*color: #fff;*/
 }
 
 h1 {
   font-size: 1.4em;
-  /*padding-left: 2em;*/
-  /*padding-right: 2em;*/
 }
 
 p {}
@@ -53,13 +52,12 @@ a {
   left: 0;
   width: 100%;
   height: 4em;
-  background: #192b3c;
 }
 
 .s-sidebar__trigger > i {
   display: inline-block;
   margin: 1.5em 0 0 1.5em;
-  color: #da6423;
+  color: $highlight;
 }
 
 .s-sidebar__nav {
@@ -112,7 +110,7 @@ a {
 
 .s-sidebar__nav-link:hover {
   /*background: #4d6276;*/
-  color: #da6423;
+  color: $highlight;
 }
 
 .s-sidebar__nav-link > i {
@@ -133,7 +131,7 @@ a {
 
 .s-sidebar__nav-link.selected {
   /*background: #4d6276;*/
-  color: #da6423;
+  color: $highlight;
 }
 
 /*Mobile First */
