@@ -8,4 +8,4 @@ menu: 10
 #order: 1
 ---
 
-![Ellary](/assets/images/Ellary/DSC06006.jpg)
+![Ellary](/images/Ellary/DSC06006.jpg)

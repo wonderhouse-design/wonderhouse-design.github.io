@@ -5,6 +5,6 @@ title: Ellary
 #permalink: /projects/
 ---
 ELLARY
-{{< gallery dir="/assets/images/Ellary" />}}
+{{< gallery dir="/images/Ellary" />}}
 
 {{< load-photoswipe >}}

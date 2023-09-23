@@ -5,6 +5,6 @@ title: Little Barnfield
 #permalink: /projects/
 ---
 Little Barnfield
-{{< gallery dir="/assets/images/Little Barnfield" />}}
+{{< gallery dir="/images/Little Barnfield" />}}
 
 {{< load-photoswipe >}}

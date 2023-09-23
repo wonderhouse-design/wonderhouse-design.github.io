@@ -5,6 +5,6 @@ title: Bluehouse
 #permalink: /projects/
 ---
 Bluehouse
-{{< gallery dir="/assets/images/Bluehouse" />}}
+{{< gallery dir="/images/Bluehouse" />}}
 
 {{< load-photoswipe >}}

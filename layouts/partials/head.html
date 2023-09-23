@@ -9,5 +9,7 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Lora">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/layout.css">
+    {{ with resources.Get "css/main.scss" | resources.ToCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{ end }}
 </head>
