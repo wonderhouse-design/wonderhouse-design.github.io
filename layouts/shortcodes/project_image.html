@@ -1,9 +1,10 @@
 {{ $name := .Get "Name" }}
 {{ $desc := .Get "Desc" }}
+{{ $url := .Get "Url" }}
 {{ $imgUrl := .Get "Img" }}
 
 <div class="img-container">
-    <a href="{{ urlize $name }}/">
+    <a href="{{ urlize $url }}/">
         <figure>
         <img src="{{ $imgUrl }}" alt="{{ $name }}">
         <div class="img-overlay">
