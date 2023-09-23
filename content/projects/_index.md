@@ -6,11 +6,8 @@ menu: 40
 #permalink: /projects/
 ---
 
-## Ellary
-[![Ellary](/assets/images/Ellary/+hero.jpg)](Ellary/)
+[![Ellary](/assets/images/Ellary/11-hero.jpg)](Ellary/)
 
-## Bluehouse
-[![Bluehouse](/assets/images/Bluehouse/+hero.jpg)](Bluehouse/)
+[![Bluehouse](/assets/images/Bluehouse/01-hero.jpg)](Bluehouse/)
 
-## Little Barnfield
-[![Little Barnfield](/assets/images/LittleBarnfield/+hero.jpg)](LittleBarnfield/)
+[![Little Barnfield](/assets/images/LittleBarnfield/08-hero.jpg)](LittleBarnfield/)

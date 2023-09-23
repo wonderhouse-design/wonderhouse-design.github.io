@@ -4,7 +4,7 @@ title: Ellary
 #order: 3
 #permalink: /projects/
 ---
-Ellary
+ELLARY
 {{< gallery dir="/assets/images/Ellary" />}}
 
 {{< load-photoswipe >}}
