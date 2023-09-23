@@ -15,7 +15,8 @@ h1 {
   padding-bottom: 1.5em;
 }
 
-p {}
+p {
+}
 
 em {
   font-style: normal;
@@ -161,18 +162,22 @@ a {
 }
 
 img.avatar {
-  border-radius: 50%;
+  //border-radius: 50%;
   /*margin: 2em;*/
-  height: 8em;
-  width: 8em;
+  //height: 8em;
+  width: 16em;
   /*margin: 2em;*/
   /*margin-top: 6em;*/
-  visibility: hidden;
+  //visibility: hidden;
 }
 
 @media (min-width: 42em) {
   .s-layout__content {
     margin-left: 12em;
+    
+    ul {
+      padding-inline-start: 0;
+    }
   }
 
   /* Sidebar */
@@ -187,12 +192,12 @@ img.avatar {
   .s-sidebar__nav ul {
     top: 8em;
   }
-
-  img.avatar {
-    visibility: visible;
-    position: absolute;
-    margin: 2em;
-  }
+  //
+  //img.avatar {
+  //  visibility: visible;
+  //  position: absolute;
+  //  margin: 2em;
+  //}
 }
 
 .img-container {

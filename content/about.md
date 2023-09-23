@@ -5,7 +5,7 @@ menu: 20
 permalink: /about/
 ---
 
-A note from **Cierra**
+### A note from **Cierra**
 
 Hello there. I’m excited you have landed here and to tell you a bit about myself. I grew up and lived in the United States (both coasts) until my early twenties took me to London for a few years. Next up was a trial move to Australia that has lasted over 15 years (minus one more recent stint living in the English countryside).
 
@@ -20,3 +20,5 @@ Using what a person already owns first is so key and oftentimes a repositioning 
 You can do it. Let me help.
 
 Cierra x
+
+{{< avatar >}}

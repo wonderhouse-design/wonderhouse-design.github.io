@@ -4,9 +4,6 @@
         <i class="fa fa-bars"></i>
     </a>
     <nav class="s-sidebar__nav">
-        <div class="avatar-container">
-            <img class="avatar" src="/images/avatar.jpg" alt="avatar"/>
-        </div>
         <ul>
 
             {{ $thisPage := .Page }}
@@ -15,12 +12,14 @@
             <li>
                 {{ if eq .Page.RelPermalink $thisPage.RelPermalink }}
                 <a class="s-sidebar__nav-link selected" href="{{ .RelPermalink }}">
+                    <em><strong>{{ upper .Title }}</strong></em>
+                </a>
                     {{ else }}
                     <a class="s-sidebar__nav-link" href="{{ .RelPermalink }}">
-                        {{ end }}
-                        <!--<i class="fa"></i>-->
                         <em>{{ upper .Title }}</em>
                     </a>
+
+                        {{ end }}
             </li>
             {{ end }}
         </ul>

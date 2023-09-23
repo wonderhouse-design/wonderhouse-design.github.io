@@ -4,10 +4,12 @@
 
 <div class="img-container">
     <a href="{{ urlize $name }}/">
+        <figure>
         <img src="{{ $imgUrl }}" alt="{{ $name }}">
         <div class="img-overlay">
-            <p>{{ $name }}</p>
+            <p><h3>{{ $name }}</h3></p>
             <p>{{ $desc }}</p>
         </div>
+        </figure>
     </a>
 </div>
