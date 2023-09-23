@@ -1,12 +1,14 @@
 {{ $name := .Get "Name" }}
 {{ $desc := .Get "Desc" }}
-{{ $url := .Get "Url" }}
-{{ $imgUrl := .Get "Img" }}
+{{ $href := .Get "Href" }}
+{{ $imgResource := resources.Get (.Get "Img") }}
+
+{{ $imgUrl :=  $imgResource.Resize "1024x" }}
 
 <div class="img-container">
-    <a href="{{ urlize $url }}/">
+    <a href="{{ urlize $href }}/">
         <figure>
-        <img src="{{ $imgUrl }}" alt="{{ $name }}">
+        <img src="{{ $imgUrl.RelPermalink }}" alt="{{ $name }}">
         <div class="img-overlay">
             <p><h3>{{ $name }}</h3></p>
             <p>{{ $desc }}</p>
