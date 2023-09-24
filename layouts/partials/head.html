@@ -12,4 +12,5 @@
     {{ with resources.Get "css/main.scss" | resources.ToCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
     {{ end }}
+    <script src="js/main.js"></script>
 </head>

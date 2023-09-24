@@ -1,7 +1,7 @@
 <!-- Sidebar -->
-<div class="s-layout__sidebar">
+<div class="s-layout__sidebar" id="sidebar">
     <a class="s-sidebar__trigger" href="#">
-        <i class="fa fa-bars"></i>
+        <i class="fa fa-bars"  id="navtrigger"></i>
     </a>
     <nav class="s-sidebar__nav">
         <ul>
@@ -14,12 +14,11 @@
                 <a class="s-sidebar__nav-link selected" href="{{ .RelPermalink }}">
                     <em><strong>{{ upper .Title }}</strong></em>
                 </a>
-                    {{ else }}
-                    <a class="s-sidebar__nav-link" href="{{ .RelPermalink }}">
-                        <em>{{ upper .Title }}</em>
-                    </a>
-
-                        {{ end }}
+                {{ else }}
+                <a class="s-sidebar__nav-link" href="{{ .RelPermalink }}">
+                    <em>{{ upper .Title }}</em>
+                </a>
+                {{ end }}
             </li>
             {{ end }}
         </ul>
