@@ -226,3 +226,12 @@ img.avatar {
   opacity: 0.3;
 }
 
+div.contact {
+  position: absolute;
+  bottom: 2em;
+  left: 2em;
+
+  i {
+    padding: 0.5em;
+  }
+}
