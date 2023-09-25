@@ -201,6 +201,7 @@ img.avatar {
 
 .img-container {
   display: block;
+  position: relative; //to constrain overlays
 }
 
 .img-container img {
