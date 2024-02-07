@@ -5,8 +5,6 @@ menu: 20
 permalink: /about/
 ---
 
-### A note from **Cierra**
-
 Hello there. I’m excited you have landed here and to tell you a bit about myself. I grew up and lived in the United States (both coasts) until my early twenties took me to London for a few years. Next up was a trial move to Australia that has lasted over 15 years (minus one more recent stint living in the English countryside).
 
 I studied English and Creative Writing at Stanford University and my first jobs were in Naming and Branding and then Advertising in San Francisco and London. I realised fairly early on though that I didn’t want to spend my life convincing people to buy things that they didn’t need and the move to Australia brought the opportunity for change. I went to Interior Design school at CATC in the Rocks in Sydney and after graduating, I started working at Real Living magazine and then freelancing for interior designers and other magazines. Raising a family took precedence for a while, but I have never stopped practising design whether it be for my own home remodelling projects or helping friends with theirs.
