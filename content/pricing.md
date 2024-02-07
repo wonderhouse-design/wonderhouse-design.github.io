@@ -5,6 +5,8 @@ menu: 40
 permalink: /pricing/
 ---
 
+Pricing is dependent on the category of work
+
 - **Initial 90 minute consultation**: $99
 
 - **In-house 3 hour organising sessions** (ideally weekly or bi-monthly): $250
