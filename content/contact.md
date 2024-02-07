@@ -5,4 +5,9 @@ menu: 60
 permalink: /contact/
 ---
 
-contacts go here
+6 William Street\
+Kiama, NSW 2533
+
+Phone: 0427540611
+
+hello@wonderhouse.com.au
