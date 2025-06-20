@@ -11,4 +11,4 @@ Pricing is dependent on the category of work
 
 - **In-house 3 hour organising sessions**: $250/session (ideally weekly or twice monthly)
 
-- **Interior design work**: $90/hr
+- **Interior design work**: Please contact for hourly rates
