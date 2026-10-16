@@ -175,11 +175,16 @@ img.avatar {
   //visibility: hidden;
 }
 
-/* the studio photo at the foot of the about page: left aligned, half the
-   width of the content area rather than the full-bleed default */
+/* the studio photo at the foot of the about page: left aligned, full width on
+   phones and half the content area from tablet up */
 .s-layout__content img.about-photo {
-  width: 50%;
   display: block;
+}
+
+@media (min-width: 42em) {
+  .s-layout__content img.about-photo {
+    width: 50%;
+  }
 }
 
 @media (min-width: 42em) {
