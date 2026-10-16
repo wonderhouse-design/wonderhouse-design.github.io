@@ -15,6 +15,11 @@ h1 {
   padding-bottom: 1.5em;
 }
 
+/* the "wonderhouse" heading links home */
+h1 a:hover {
+  color: $highlight;
+}
+
 p {
 }
 
@@ -221,6 +226,7 @@ img.avatar {
 
 .img-container:hover .img-overlay {
   opacity: 1;
+  color: $highlight;
 }
 
 .img-container:hover img {
