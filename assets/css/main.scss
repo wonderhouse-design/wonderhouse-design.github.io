@@ -226,6 +226,10 @@ img.avatar {
 
 .img-container:hover .img-overlay {
   opacity: 1;
+}
+
+/* the caption only turns blue when the pointer is over the text itself */
+.img-overlay:hover {
   color: $highlight;
 }
 
