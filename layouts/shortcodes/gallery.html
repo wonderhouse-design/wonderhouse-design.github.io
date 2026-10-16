@@ -6,8 +6,11 @@
 	{{- with (.Get "dir") -}}
 		<!-- If a directory was specified, generate figures for all of the images in the directory -->
 		{{- $files := readDir (print "assets/" .) }}
+		{{- $exclude := split (default "" ($.Get "exclude")) "," }}
 		{{- range $files -}}
+			{{- if and (not .IsDir) (not (in $exclude .Name)) -}}{{/* skip subdirectories (e.g. an archived "old" folder) and any file named in exclude */}}
 			{{ $res := resources.Get (printf "%s/%s" ($.Get "dir") .Name) }}
+			{{- if and $res (eq $res.MediaType.MainType "image") -}}{{/* skip anything that is not an image, e.g. a stray .DS_Store */}}
 			{{- $isdouble := .Name | findRE `^[^\.]+\.[^\.]+\.` | len | ne 0 }}<!-- is the current file a thumbnail image? -->
 			{{- $caption :=  .Name | replaceRE "\\..*" "" | humanize }}<!-- humanized filename without extension -->
 			{{- $thumbRes := $res.Resize "1024x" }}
@@ -25,6 +28,8 @@
 		</figure>
 	</div>
 
+			{{- end }}
+			{{- end }}
 		{{- end }}
 	{{- else -}}
 		<!-- If no directory was specified, include any figure shortcodes called within the gallery -->

@@ -4,6 +4,10 @@
 /assets/jsconfig.json
 hugo_stats.json
 
+# macOS Finder metadata (appears in any browsed folder, and a stray one
+# inside a gallery image directory used to break the build)
+.DS_Store
+
 # Executable may be added to repository
 hugo.exe
 hugo.darwin

@@ -227,6 +227,35 @@ img.avatar {
   opacity: 0.3;
 }
 
+/* Gallery layout.
+   The gallery shortcode marks images whose filename contains two dots
+   (e.g. 05.1.jpg / 05.2.jpg) with classes "box double" and "img double".
+   Those pairs are laid out side by side; every other image takes a full
+   width row, so single images keep the same width and rhythm as before. */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  /* row-gap stands in for the 1em top + 1em bottom figure margins it
+     replaces; padding stands in for the 40px side margin figures had. */
+  gap: 2em 1.5em;
+  padding: 1em 40px;
+}
+
+.gallery figure {
+  margin: 0;
+}
+
+.gallery .box {
+  flex: 1 1 100%;
+  min-width: 0;
+}
+
+/* two per row: 50% each, less half the column gap, so the pair meets the
+   same outer edges as a full width image */
+.gallery .box.double {
+  flex: 1 1 calc(50% - 0.75em);
+}
+
 div.contact {
   position: absolute;
   bottom: 2em;
