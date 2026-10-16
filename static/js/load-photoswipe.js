@@ -9,6 +9,42 @@ if (window.loadphotoswipejs) {
 } 
 var loadphotoswipejs = 1
 
+/* the gallery that is currently open (or animating away) */
+var gallery = null;
+var galleryClosing = false;
+var pendingIndex = null;
+
+function openGallery(pswpEl, items, index) {
+	gallery = new PhotoSwipe(pswpEl, PhotoSwipeUI_Default, items, {
+		index: index,
+		bgOpacity: 0.8,
+		showHideOpacity: true,
+		// PhotoSwipe's history integration pushes a #&gid/pid entry and calls
+		// history.back() when closing; the resulting popstate can close a photo
+		// opened in the meantime, so keep it off.
+		history: false
+	});
+	// While the gallery animates out it keeps its (now invisible) overlay on top
+	// of the page for ~350ms and would swallow clicks aimed at the thumbnails below.
+	gallery.listen('close', function() {
+		galleryClosing = true;
+		pswpEl.style.pointerEvents = 'none';
+	});
+	gallery.listen('destroy', function() {
+		gallery = null;
+		galleryClosing = false;
+		pswpEl.style.pointerEvents = '';
+		if (pendingIndex !== null) {
+			var next = pendingIndex;
+			pendingIndex = null;
+			// give the previous gallery's teardown (its pending transitions and
+			// transitionend callbacks) a moment to finish before reusing the node
+			setTimeout(function() { openGallery(pswpEl, items, next); }, 100);
+		}
+	});
+	gallery.init();
+}
+
 /* TODO: Make the share function work */
 $( document ).ready(function() {
 	/*
@@ -18,6 +54,7 @@ $( document ).ready(function() {
 	// for every figure element on the page:
 	$('figure').each( function() {
 		if ($(this).attr('class') == 'no-photoswipe') return true; // ignore any figures where class="no-photoswipe"
+		if (!$(this).find('a').attr('href')) return true; // ignore figures whose image is not linked, e.g. project tiles
 		// get properties from child a/img/figcaption elements,
 		var $figure = $(this),
 			$a 		= $figure.find('a'),
@@ -69,12 +106,17 @@ $( document ).ready(function() {
 			event.preventDefault(); // prevent the normal behaviour i.e. load the <a> hyperlink
 			// Get the PSWP element and initialise it with the desired options
 			var $pswp = $('.pswp')[0];
-			var options = {
-				index: index, 
-				bgOpacity: 0.8,
-				showHideOpacity: true
+			if (gallery) {
+				// The previous gallery is still open or animating away. Opening a
+				// second PhotoSwipe on the same element would be torn down by the
+				// first one, so remember this click and replay it once it has gone.
+				pendingIndex = index;
+				if (!galleryClosing) {
+					gallery.close();
+				}
+				return;
 			}
-			new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options).init();
+			openGallery($pswp, items, index);
 		});	
 	});
 });
