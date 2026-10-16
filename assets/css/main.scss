@@ -249,6 +249,18 @@ img.avatar {
   opacity: 0.3;
 }
 
+/* Touch devices have no hover, so the caption would never appear.
+   Show it (and dim the image underneath, as hovering does) all the time. */
+@media (hover: none) {
+  .img-overlay {
+    opacity: 1;
+  }
+
+  .img-container img {
+    opacity: 0.3;
+  }
+}
+
 /* Gallery layout.
    The gallery shortcode marks images whose filename contains two dots
    (e.g. 05.1.jpg / 05.2.jpg) with classes "box double" and "img double".
