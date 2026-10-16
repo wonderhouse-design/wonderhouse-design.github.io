@@ -18,3 +18,5 @@ Using what a person already owns first is so key and oftentimes a repositioning 
 You can do it. Let me help.
 
 Cierra x
+
+{{< asset_image src="images/about.jpg" alt="Cierra" >}}
