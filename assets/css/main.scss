@@ -70,6 +70,11 @@ a {
 
 .s-sidebar__nav {
   position: fixed;
+  /* Above the page content, so the open menu covers it. The project tile
+     captions are positioned too and come later in the document, so they would
+     otherwise paint over the menu. Stays below the trigger (2), which is what
+     holds the menu open while the pointer is on it. */
+  z-index: 1;
   top: 0;
   left: -12em;
   overflow: hidden;
