@@ -1,0 +1,10 @@
+{{/* An image from assets/, resized for the web so the multi-megabyte original
+     never has to be published. Usage:
+     {{< asset_image src="images/Ellary/07.jpg" alt="Wonderhouse" width="1600" >}} */}}
+{{- $src := .Get "src" -}}
+{{- $res := resources.Get $src -}}
+{{- if not $res }}{{ errorf "asset_image: %q not found in assets/" $src }}{{ end -}}
+{{- $width := .Get "width" | default 1600 | int -}}
+{{- $img := $res -}}
+{{- if gt $res.Width $width }}{{ $img = $res.Resize (printf "%dx q85" $width) }}{{ end -}}
+<img src="{{ $img.RelPermalink }}" alt="{{ .Get "alt" | default $res.Name }}"{{ with .Get "class" }} class="{{ . }}"{{ end }}/>

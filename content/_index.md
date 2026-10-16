@@ -10,4 +10,4 @@ menu: 10
 
 
 
-![Wonderhouse](/images/Ellary/07.jpg)
+{{< asset_image src="images/Ellary/07.jpg" alt="Wonderhouse" >}}
