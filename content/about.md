@@ -19,4 +19,4 @@ You can do it. Let me help.
 
 Cierra x
 
-{{< asset_image src="images/about.jpg" alt="Cierra" >}}
+{{< asset_image src="images/about.jpg" alt="Cierra" class="about-photo" >}}
